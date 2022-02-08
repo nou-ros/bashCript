@@ -1,2 +1,2 @@
 # bashCrypto
-Simple bash scripts tryouts to improve bash scripting.
+Simple bash script tryouts to improve bash scripting.
