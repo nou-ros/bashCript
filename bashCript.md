@@ -94,9 +94,30 @@ done
 echo 'All Done'
 
 output: 
-- 
 Number: 0
 Number: 1
+All Done
+```
+3. while-continue
+```
+#!/bin/bash
+
+i=0
+while [[ $i -lt 5 ]]
+do
+  ((i++))
+  if [[ "$i" == '2' ]]; then
+    continue 
+  fi
+  echo "Number: $i"
+done
+echo 'All Done'
+
+output: 
+Number: 1
+Number: 3
+Number: 4
+Number: 5
 All Done
 ```
 ## until
