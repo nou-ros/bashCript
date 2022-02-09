@@ -11,8 +11,10 @@
   echo "this is bash ${WORD}ing"
   echo $WORD
   
+  ![#f03c15]
   output: 
   - this is bash script
   - this is bash scripting
   - script
+  `#f03c15`
 ```
