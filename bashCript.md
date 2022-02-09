@@ -1,6 +1,6 @@
 ## Chapters:
 1. [Variables](#varaibles)
-2. [IF Else](#if-else)
+2. [Conditionals](#conditionals)
 3. [Operators](#operators)
 4. [Arrays](#arrays)
 
