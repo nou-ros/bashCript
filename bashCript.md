@@ -123,20 +123,64 @@ Enter the third number: 3
 
 ## for
 1.
-```
-#!/bin/bash
-users="devdojo, bobby, tony"
-for user in ${users}
-do 
-    echo "${user}"
+```#!/bin/bash
+for element in Hydrogen Helium Lithium Beryllium
+do
+  echo "Element: $element"
 done
 
 output: 
-devdojo,
-bobby,
-tony
+Element: Hydrogen
+Element: Helium
+Element: Lithium
+Element: Beryllium
 ```
+2. for with step
+```#!/bin/bash
+for i in {0..20..5}
+do 
+  echo "Number: $i"
+done 
 
+output:
+Number: 0
+Number: 5
+Number: 10
+Number: 15
+Number: 20
+```
+3. for-break
+```#!/bin/bash
+for anime in gintama bleach naruto; do  
+  if [[ "$anime" == "naruto" ]]; then
+    break
+  fi
+  echo "Anime: $anime"
+done 
+echo 'All Done!'
+
+output:
+Anime: gintama
+Anime: bleach
+All Done!
+```
+4. for-continue
+```
+#!/bin/bash
+for anime in gintama bleach naruto; do  
+  if [[ "$anime" == "bleach" ]]; then
+    continue
+  fi
+  echo "Anime: $anime"
+done 
+
+echo 'All Done!'
+
+output:
+Anime: gintama
+Anime: naruto
+All Done!
+```
 ## while
 1. Simple while
 ```
