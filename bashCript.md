@@ -1,4 +1,4 @@
-## Chapters:
+# Chapters:
 1. [Variables](#varaibles)
 2. [Conditionals](#conditionals)
 3. [Operators](#operators)
@@ -44,7 +44,7 @@ The rhel8 code name is Ootpa
 
 ```
 ## Loops
-# for
+## for
 
 ## Arrays
 1.
