@@ -22,7 +22,7 @@ output:
 2.
 
 ## Conditionals
-1.
+1. if-else
 ```#!/bin/bash
 read -p "Name of rhel 8? " codeName
 
@@ -42,7 +42,82 @@ Plese enter the name
 -
 Name of rhel 8? Ootpa        
 The rhel8 code name is Ootpa
+```
+2. If Elif Else
+```#!/bin/bash
+echo -n "Enter a number "
+read  VAR
 
+if [[ $VAR -gt 10 ]]
+then 
+  echo "The variables is greater than 10."
+elif [[ $VAR -eq 10 ]]
+then
+  echo "The variable is equal to 10."
+else
+  echo "The variable is less than 10."
+fi
+
+output:
+Enter a number 5
+The variable is less than 10.
+```
+3. Nested  If
+```#!/bin/bash
+echo -n "Enter the first number: "
+read VAR1
+echo -n "Enter the second number: "
+read VAR2
+echo -n "Enter the third number: "
+read VAR3
+
+if [[ $VAR1 -ge $VAR2 ]]
+then 
+  if [[ $VAR1 -ge $VAR3 ]]
+  then
+    echo "$VAR1 is the largest number."
+  else
+    echo "$VAR3 is the largest number."
+  fi
+else
+  if [[ $VAR2 -ge $VAR3 ]]
+  then 
+    echo "$VAR2 is the largest number."
+  else
+    echo "$VAR3 is the largest number."
+  fi
+fi
+
+output: 
+Enter the first number: 2
+Enter the second number: 4
+Enter the third number: 7
+7 is the largest number.
+```
+4. Multiple Conditions
+```#!/bin/bash
+echo -n "Enter the first number: "
+read VAR1
+echo -n "Enter the second number: "
+read VAR2
+echo -n "Enter the third number: "
+read VAR3
+
+if [[ $VAR1 -ge $VAR2 ]] && [[ $VAR1 -ge $VAR3 ]]
+then
+  echo "$VAR1 is the largest number."
+elif [[ $VAR2 -ge $VAR1 ]] && [[ $VAR2 -ge $VAR3 ]]
+then 
+  echo "$VAR2 is the largest number."
+else
+  echo "$VAR3 is the largest number."
+fi 
+
+output:
+Enter the first number: 6
+Enter the second number: 5
+Enter the third number: 3
+6 is the largest number.
 ```
 ## Loops
 
