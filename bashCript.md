@@ -21,7 +21,39 @@ output:
 - script
 ```
 2.
+```#!/bin/bash
 
+echo "Total arguments : $#"
+echo "1st argument = $1"
+echo "3rd argument = $3"
+
+output: 
+bash main.sh sword art online
+Total arguments : 3
+1st argument = sword
+3rd argument = online
+```
+3.
+```
+#!/bin/bash
+initial="One"
+ending="Piece"
+fullName="${initial} ${ending}"
+echo "Mangaka of ${fullName} is Oda"
+
+output:
+Mangaka of One Piece is Oda.
+```
+4.
+```
+#!/bin/bash
+string="For standard partition use fdisk else use lvm"
+subString=${string:4:9}
+echo "$subString"
+
+output:
+standard
+```
 ## Conditionals
 1. if-else
 ```#!/bin/bash
