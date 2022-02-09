@@ -44,7 +44,7 @@ The rhel8 code name is Ootpa
 
 ```
 ## Loops
-#for
+# for
 
 ## Arrays
 1.
