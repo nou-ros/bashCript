@@ -6,7 +6,7 @@
 ## Variables
 1. 
 ```#!/bin/bash
-	WORD='script'
+  WORD='script'
   echo "this is bash $WORD"
   echo "this is bash ${WORD}ing"
   echo $WORD
