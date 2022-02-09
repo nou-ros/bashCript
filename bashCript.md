@@ -3,3 +3,16 @@
 2. [IF Else](#if-else)
 3. [Operators](#operators)
 
+## Variables
+1. 
+```#!/bin/bash
+	WORD='script'
+  echo "this is bash $WORD"
+  echo "this is bash ${WORD}ing"
+  echo $WORD
+  
+  output: 
+  - this is bash script
+  - this is bash scripting
+  - script
+```
