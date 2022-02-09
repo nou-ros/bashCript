@@ -63,7 +63,7 @@ tony
 ```
 
 ## while
-1.
+1. Simple while
 ```
 #!/bin/bash
 
