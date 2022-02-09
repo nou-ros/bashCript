@@ -79,7 +79,26 @@ output:
 2
 3
 ```
+2.
+```#!/bin/bash
 
+i=0
+while [[ $i -lt 5 ]]
+do
+  echo "Number: $i"
+  ((i++))
+  if [[ "$i" == '2' ]]; then
+    break
+  fi
+done
+echo 'All Done'
+
+output: 
+- 
+Number: 0
+Number: 1
+All Done
+```
 ## until
 1.
 ```
