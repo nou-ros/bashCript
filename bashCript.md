@@ -335,3 +335,24 @@ Before executing function: var1: A, var2: B
 Inside function : var!: C, var2: D
 After executing function: var1: A, var2: D
 ```
+2. function return
+```
+my_function(){  
+ local func_result="some work"
+ echo "$func_result"
+}
+result="$(my_function)"
+echo ${result}
+
+output:
+some work
+```
+3. function with argument
+```#!/bin/bash
+greeting(){
+echo "first argument $1"
+echo "second argument $2"
+}
+
+greeting "john" "doe"
+```
