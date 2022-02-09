@@ -4,14 +4,15 @@
 3. [Operators](#operators)
 4. [Loops](#loops)
 5. [Arrays](#arrays)
+6. [Case](#case)
 
 ## Variables
 1. 
 ```#!/bin/bash
-WORD='script'
-echo "this is bash $WORD"
-echo "this is bash ${WORD}ing"
-echo $WORD
+word='script'
+echo "this is bash $word"
+echo "this is bash ${word}ing"
+echo $word
 
 output: 
 - this is bash script
@@ -44,8 +45,58 @@ The rhel8 code name is Ootpa
 
 ```
 ## Loops
-## for
 
+## for
+1.
+```
+#!/bin/bash
+users="devdojo, bobby, tony"
+for user in ${users}
+do 
+    echo "${user}"
+done
+
+output: 
+devdojo,
+bobby,
+tony
+```
+
+## while
+1.
+```
+#!/bin/bash
+
+counter=1
+while [[ $counter -le 3 ]]
+do
+    echo "${counter}"
+    ((counter++))
+done
+
+output: 
+1
+2
+3
+```
+
+## until
+1.
+```
+#!/bin/bash
+count=1
+until [ $count -gt 4 ]
+do
+    echo "${count}"
+    ((count++))
+done
+
+output:
+1
+2
+3
+4
+```
 ## Arrays
 1.
 ```#!/bin/bash
@@ -60,4 +111,33 @@ output:
 - value 4
 - value 1 value 2 value 3 value 4
 - 4
+```
+## Case
+1.
+```
+#!/bin/bash
+
+# -n ensures that input are given in the same line
+echo -n "Enter the name of a country: "
+read country
+echo -n "The official language of $country is "
+
+case $country in Bangladesh)
+echo -n "Bangla";;
+England | America)
+echo -n "English";;
+Italy | "San Marino" | Switzerland | "Vatican City")
+echo -n "Italian";;
+*)
+echo -n "Unknown";;
+esac
+
+output: 
+-
+Enter the name of a country: Bangladesh
+The official language of Bangladesh is Bangla.
+
+-
+Enter the name of a country: Japan
+The official language of Japan is Unknown
 ```
