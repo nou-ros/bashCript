@@ -152,6 +152,18 @@ output:
 - value 1 value 2 value 3 value 4
 - 4
 ```
+2.
+```#!/bin/bash
+BOOKS=("Clean Code" "Clean Architecture", "The Software Architect Elevator")
+for book in "${BOOKS[@]}"; do
+  echo "Book: $book"
+done
+
+output:
+Book: Clean Code
+Book: Clean Architecture,
+Book: The Software Architect Elevator
+```
 ## Case
 1.
 ```
