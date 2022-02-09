@@ -5,6 +5,7 @@
 4. [Loops](#loops)
 5. [Arrays](#arrays)
 6. [Case](#case)
+7. [function](#function)
 
 ## Variables
 1. 
@@ -43,7 +44,7 @@ Plese enter the name
 Name of rhel 8? Ootpa        
 The rhel8 code name is Ootpa
 ```
-2. If Elif Else
+2. if-elif-else
 ```#!/bin/bash
 echo -n "Enter a number "
 read  VAR
@@ -62,7 +63,7 @@ output:
 Enter a number 5
 The variable is less than 10.
 ```
-3. Nested  If
+3. nested-if
 ```#!/bin/bash
 echo -n "Enter the first number: "
 read VAR1
@@ -94,7 +95,7 @@ Enter the second number: 4
 Enter the third number: 7
 7 is the largest number.
 ```
-4. Multiple Conditions
+4. multiple conditions
 ```#!/bin/bash
 echo -n "Enter the first number: "
 read VAR1
@@ -122,7 +123,7 @@ Enter the third number: 3
 ## Loops
 
 ## for
-1.
+1. simple-for
 ```#!/bin/bash
 for element in Hydrogen Helium Lithium Beryllium
 do
@@ -135,7 +136,7 @@ Element: Helium
 Element: Lithium
 Element: Beryllium
 ```
-2. for with step
+2. for-step
 ```#!/bin/bash
 for i in {0..20..5}
 do 
@@ -182,7 +183,7 @@ Anime: naruto
 All Done!
 ```
 ## while
-1. Simple while
+1. simple-while
 ```
 #!/bin/bash
 
@@ -311,4 +312,26 @@ The official language of Bangladesh is Bangla.
 -
 Enter the name of a country: Japan
 The official language of Japan is Unknown
+```
+## Function
+1.
+```#!/bin/bash
+
+var1='A'
+var2='B'
+
+my_function(){
+  local var1='C'
+  var2='D'
+  echo "Inside function : var!: $var1, var2: $var2"
+}
+
+echo "Before executing function: var1: $var1, var2: $var2"
+my_function
+echo "After executing function: var1: $var1, var2: $var2"
+
+output:
+Before executing function: var1: A, var2: B
+Inside function : var!: C, var2: D
+After executing function: var1: A, var2: D
 ```
