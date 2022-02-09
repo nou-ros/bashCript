@@ -316,7 +316,6 @@ The official language of Japan is Unknown
 ## Function
 1.
 ```#!/bin/bash
-
 var1='A'
 var2='B'
 
