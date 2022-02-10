@@ -6,6 +6,7 @@
 5. [Arrays](#arrays)
 6. [Case](#case)
 7. [function](#function)
+8. [dictionary](#dictionary)
 
 ## Variables
 1. 
@@ -386,4 +387,47 @@ echo "second argument $2"
 }
 
 greeting "john" "doe"
+```
+
+## dictionary
+1.
+```
+declare -A sounds
+sounds[dog]="bark"
+sounds[cow]="moo"
+sounds[bird]="tweet"
+sounds[wolf]="howl"
+echo ${sounds[dog]} # dog's sound
+echo ${sounds[@]} # all values
+echo ${!sounds[@]} # all keys
+echo ${#sounds[@]} # number of elements
+unset sounds[dog] # delete dog
+echo ${!sounds[@]}
+
+echo -e "\nValues \tof \tsound: "
+for value in "${sounds[@]}"; do
+  echo $value
+done
+
+echo -e "\nKeys \tof \tsound: "
+for key in "${sounds[@]}"; do
+  echo $key
+done
+
+output:
+bark
+bark tweet moo howl
+dog bird cow wolf
+4
+bird cow wolf
+
+Values  of  sound: 
+tweet
+moo
+howl
+
+Keys    of  sound: 
+tweet
+moo
+howl
 ```
