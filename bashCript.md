@@ -154,7 +154,7 @@ Enter the third number: 3
 6 is the largest number.
 ```
 ## Operators
-1.
+1. Arithmatic operators
 ```
 read -p 'Enter a : ' a
 read -p 'Enter b : ' b
@@ -174,7 +174,7 @@ echo "After increment operator = ${a}"
 ((--b))
 echo "After decrement operator = ${b}"
 ```
-2.
+2. Relational operators
 ```
 read -p "Enter a : " a
 read -p "Enter b: " b
