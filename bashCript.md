@@ -159,15 +159,15 @@ Enter the third number: 3
 read -p 'Enter a : ' a
 read -p 'Enter b : ' b
 
-add=$((a+b))
+add=$((a + b))
 echo "Addition of ${a} and ${b} are = ${add}"
-sum=$((a-b))
+sub=$((a - b))
 echo "Subtraction of ${a} and ${b} is = ${sub}"
 mul=$((a * b))
 echo "Multiplication of ${a} and ${b} is = $mul"
 div=$((a / b))
 echo "Division of ${a} by ${b} is = ${div}"
-mod=$((a % ))
+mod=$((a % b))
 echo "Modulus of ${a} by ${b} is = ${mod}
 ((++a))
 echo "After increment operator = ${a}"
@@ -217,8 +217,7 @@ if((${a} <= ${b}))
 then
 	echo "${a} is less than or equal to ${b}"
 else	
-	echo "${a} is not less than or equal to ${b}"
-fi
+
 ```
 
 ## Loops
