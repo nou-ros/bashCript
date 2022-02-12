@@ -168,7 +168,7 @@ echo "Multiplication of ${a} and ${b} is = $mul"
 div=$((a / b))
 echo "Division of ${a} by ${b} is = ${div}"
 mod=$((a % b))
-echo "Modulus of ${a} by ${b} is = ${mod}
+echo "Modulus of ${a} by ${b} is = ${mod}"
 ((++a))
 echo "After increment operator = ${a}"
 ((--b))
@@ -176,48 +176,49 @@ echo "After decrement operator = ${b}"
 ```
 2.
 ```
-read -p "Enter a : ' a
-read -p "Enter b: ' b
-if((${a} == ${b})
+read -p "Enter a : " a
+read -p "Enter b: " b
+
+if(( ${a} == ${b} ))
 then
 	echo "${a} and ${b} are equal"
 else
 	echo "${a} is not equal to ${b}"
 fi
 
-if((${a} != ${b}))
+if(( ${a} != ${b} ))
 then 
 	echo "${a} is not equal to ${b}"
 else 
 	echo "${a} is equal to ${b}"
 fi
 
-if((${a} < ${b}))
+if(( ${a} < ${b} ))
 then 
 	echo "${a} is less than ${b}"
 else 
 	echo "${a} is greater than ${b}"
 fi
 
-if((${a} > ${b}))
+if(( ${a} > ${b} ))
 then 
 	echo "${a} is greater than ${b}"
 else
 	echo "${b} is greater than ${a}"
 fi
 
-if((${a} >= ${b}))
+if(( ${a} >= ${b} ))
 then 
 	echo "${a} is greater than or equal to ${b}"
 else
 	echo "${a} is not greater than or equal to ${b}"
 fi
 
-if((${a} <= ${b}))
+if(( ${a} <= ${b} ))
 then
 	echo "${a} is less than or equal to ${b}"
 else	
-
+	echo "${a} is greater than or equal to ${b}"
 ```
 
 ## Loops
