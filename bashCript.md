@@ -10,7 +10,7 @@
 
 ## Variables
 1. 
-```#!/bin/bash
+```#!/bin/sh
 word='script'
 echo "this is bash $word"
 echo "this is bash ${word}ing"
@@ -22,7 +22,7 @@ output:
 - script
 ```
 2.
-```#!/bin/bash
+```#!/bin/sh
 
 echo "Total arguments : $#"
 echo "1st argument = $1"
@@ -36,7 +36,7 @@ Total arguments : 3
 ```
 3.
 ```
-#!/bin/bash
+#!/bin/sh
 initial="One"
 ending="Piece"
 fullName="${initial} ${ending}"
@@ -47,7 +47,7 @@ Mangaka of One Piece is Oda.
 ```
 4.
 ```
-#!/bin/bash
+#!/bin/sh
 string="For standard partition use fdisk else use lvm"
 subString=${string:4:9}
 echo "$subString"
@@ -57,7 +57,7 @@ standard
 ```
 ## Conditionals
 1. if-else
-```#!/bin/bash
+```#!/bin/sh
 read -p "Name of rhel 8? " codeName
 
 # -z flag check if string is empty
@@ -78,7 +78,7 @@ Name of rhel 8? Ootpa
 The rhel8 code name is Ootpa
 ```
 2. if-elif-else
-```#!/bin/bash
+```#!/bin/sh
 echo -n "Enter a number "
 read  VAR
 
@@ -97,7 +97,7 @@ Enter a number 5
 The variable is less than 10.
 ```
 3. nested-if
-```#!/bin/bash
+```#!/bin/sh
 echo -n "Enter the first number: "
 read VAR1
 echo -n "Enter the second number: "
@@ -129,7 +129,7 @@ Enter the third number: 7
 7 is the largest number.
 ```
 4. multiple conditions
-```#!/bin/bash
+```#!/bin/sh
 echo -n "Enter the first number: "
 read VAR1
 echo -n "Enter the second number: "
@@ -225,7 +225,7 @@ else
 
 ## for
 1. simple-for
-```#!/bin/bash
+```#!/bin/sh
 for element in Hydrogen Helium Lithium Beryllium
 do
   echo "Element: $element"
@@ -238,7 +238,7 @@ Element: Lithium
 Element: Beryllium
 ```
 2. for-step
-```#!/bin/bash
+```#!/bin/sh
 for i in {0..20..5}
 do 
   echo "Number: $i"
@@ -252,7 +252,7 @@ Number: 15
 Number: 20
 ```
 3. for-break
-```#!/bin/bash
+```#!/bin/sh
 for anime in gintama bleach naruto; do  
   if [[ "$anime" == "naruto" ]]; then
     break
@@ -286,7 +286,7 @@ All Done!
 ## while
 1. simple-while
 ```
-#!/bin/bash
+#!/bin/sh
 
 counter=1
 while [[ $counter -le 3 ]]
@@ -301,7 +301,7 @@ output:
 3
 ```
 2. while-break
-```#!/bin/bash
+```#!/bin/sh
 
 i=0
 while [[ $i -lt 5 ]]
@@ -321,7 +321,7 @@ All Done
 ```
 3. while-continue
 ```
-#!/bin/bash
+#!/bin/sh
 
 i=0
 while [[ $i -lt 5 ]]
@@ -344,7 +344,7 @@ All Done
 ## until
 1.
 ```
-#!/bin/bash
+#!/bin/sh
 count=1
 until [ $count -gt 4 ]
 do
@@ -360,7 +360,7 @@ output:
 ```
 ## Arrays
 1.
-```#!/bin/bash
+```#!/bin/sh
 myArray=("value 1" "value 2" "value 3" "value 4")
 echo "${myArray[1]}"
 echo "${myArray[-1]}"
@@ -374,7 +374,7 @@ output:
 - 4
 ```
 2.
-```#!/bin/bash
+```#!/bin/sh
 BOOKS=("Clean Code" "Clean Architecture", "The Software Architect Elevator")
 for book in "${BOOKS[@]}"; do
   echo "Book: $book"
@@ -416,7 +416,7 @@ The official language of Japan is Unknown
 ```
 ## Function
 1.
-```#!/bin/bash
+```#!/bin/sh
 var1='A'
 var2='B'
 
