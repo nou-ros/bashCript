@@ -7,7 +7,6 @@
 6. [Case](#case)
 7. [function](#function)
 8. [dictionary](#dictionary)
-9. okay
 
 ## Variables
 1. 
