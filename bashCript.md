@@ -55,6 +55,33 @@ echo "$subString"
 output:
 standard
 ```
+5. argument passing
+```
+#!/bin/sh
+#first 2 arguments
+echo $1 $2
+args=("$@")
+#print first 3 arguments
+echo ${args[0]} ${args[1]} ${args[2]}
+#print all the arguments
+echo $@
+echo "Total number of commands passed: $#"
+
+input: ./hello.sh perfectly balanced how everything should be
+output: 
+perfectly balanced
+perfectly balanced how
+perfectly balanced how everything should be
+Total number of commands passed: 6
+```
+6. use shell commands inside script
+```
+#!/bin/bash
+echo $(uname -o)
+
+output:
+GNU/Linux
+****
 ## Conditionals
 1. if-else
 ```#!/bin/sh
