@@ -426,12 +426,14 @@ echo "${myArray[1]}"
 echo "${myArray[-1]}"
 echo "${myArray[@]}"
 echo "${#myArray[@]}"
-
+myarray[4]="value5"
+myarray+=("value6")
 output: 
 - value 2
 - value 4
 - value 1 value 2 value 3 value 4
 - 4
+- 
 ```
 2.
 ```#!/bin/sh
