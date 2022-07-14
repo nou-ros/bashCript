@@ -561,3 +561,27 @@ tweet
 moo
 howl
 ```
+
+## select
+```
+select option in "cat" "dog" "quit"
+do 
+	case $option in 
+		cat) echo "Cats like to sleep.";;
+		dog) echo "Dogs like to play catch.";;
+		quit) break;;
+		*) echo "I am not sure what that is.";;
+	esac
+done
+
+output: ./my.sh
+1) cat
+2) dog
+3) quit
+#? 1
+Cats like to sleep.
+#? 2
+Dogs like to play catch.
+#? 3
+```
+
