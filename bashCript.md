@@ -402,6 +402,18 @@ Number: 4
 Number: 5
 All Done
 ```
+4.
+while infinity
+```
+#!/bin/bash
+while :
+# while [[ 1 ]]
+# while true
+do
+	echo "Hello world"
+done
+```
+
 ## until
 1.
 ```
