@@ -60,6 +60,21 @@ Python is a very very popular language.
 Python is easy to use. Python is easy to learn.
 
 Python is a cross-platform language.
+
+- sed 's/\(^.\{1,15\}\).*/\1/' test.txt
+Python is a ver
+
+Python is easy
+
+Python is a cro
+
+- sed 's/\(Python\)/\0 (new text added)/1' test.txt
+Python (new text added) is a very popular language.
+
+Python (new text added) is easy to use. Python is easy to learn.
+
+Python (new text added) is a cross-platform language.
+
 # echo /home/ubuntu/code/perl/add.pl | sed 's;/;\*;g' 
 - *home*ubuntu*code*perl*add.pl
 
@@ -151,6 +166,37 @@ linux
 android
 os
 
+- sed '$!N;s/Linux\nAndroid/Ubuntu\nAndoid Lollipop/;P;D' os.txt
+Windows
+Ubuntu
+Andoid Lollipop
+OS
+
+- sed G os.txt
+Windows
+
+Linux
+
+Android
+
+OS
+
+- sed g os.txt | sed 's/[A-Za-z0-9]//g' os.txt
+output will be empty
+
+- sed -n 's/^L/Matched String is - &/p' os.txt
+Matched String is - Linux
+
+- sed '=' os.txt
+1
+Windows
+2
+Linux
+3
+Android
+4
+OS
+
 # echo "Bash Perl Python Java PHP ASP" | sed 's/Python/Added Text\n/'
 Bash Perl Added Text
  Java PHP ASP
@@ -163,5 +209,14 @@ batch
 #  echo "I like bash programming " | sed 's/Bash/PHP/i'
 I like PHP programming
 
+# echo "hello, how are you?" | sed 's/\(hello\)/\1 John/'
+hello John, how are you?
 
-32
+# echo "perl python" | sed -e 's/\([^ ]*\) *\([^ ]*\)/\2 \1/'
+python perl
+
+# echo "Ubuntu Centos Debian" | sed -e 's/Ubuntu/Kubuntu/; s/Centos/Fedora/'
+Kubuntu Fedora Debian
+
+# echo "I like bash programming" | sed 's/\([a-z]\)\([a-zA-Z0-9]*\)/\u\1\2/g'
+- I Like Bash Programming
